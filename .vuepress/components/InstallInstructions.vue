@@ -52,13 +52,13 @@
 
     <div v-if="selectedSystem === 'raspberry-pi' || selectedSystem === 'pine64'">
       <hr>
-      <h3>{{optionNumber('openhabian')}}Use Raspberry Pi imager</h3>
+      <h3>{{optionNumber('openhabian')}}Use Raspberry Pi imager to flash your microSD card</h3>
       <ol>
         <div class="download-button-container">
           <a class="download-button big" target="_blank" href="https://www.raspberrypi.com/software/">Get Raspberry Pi imager</a>
         </div>
         <li>Select your openHABian image under <code>Other specific-purpose OS - Home assistants and home automation</code>.</li>
-        <li>Insert the SD card in your device, connect the Ethernet cable and turn it on.</li>
+        <li>Insert the flashed SD card into your Raspberry Pi card slot, connect the Ethernet cable and turn it on.</li>
         <li>If you want to use Wi-Fi, openHABian will <router-link to="/docs/installation/openhabian.html#Wi-Fi-Hotspot">launch a hotspot</router-link>.</li>
         <li><router-link to="/docs/installation/openhabian.html">Please read the docs</router-link> while your box is installing openHABian.</li>
         <li>Navigate with a web browser to <code>http://openhabian:8080</code></li>
