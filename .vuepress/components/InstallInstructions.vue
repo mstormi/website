@@ -59,7 +59,7 @@
         </div>
         <li>Select your openHABian image under <code>Other specific-purpose OS - Home assistants and home automation</code>.</li>
         <li>Insert the SD card in your device, connect the Ethernet cable and turn it on.</li>
-        <li>If you want to use Wi-Fi, openHABian will <router-link to="/docs/installation/openhabian.html#Wi-Fi-Hotspot">launch a hotspot</router-link>.</li>
+        <li>If you want to use Wi-Fi, openHABian will <router-link to="/docs/installation/openhabian.html#wi-fi-hotspot">launch a hotspot</router-link>.</li>
         <li><router-link to="/docs/installation/openhabian.html">Please read the docs</router-link> while your box is installing openHABian.</li>
         <li>Navigate with a web browser to <code>http://openhabian:8080</code></li>
         <li v-if="selectedVersion !== 'stable'">Use the <code>openhabian-config</code> tool (<router-link to="/docs/installation/openhabian.html#openhabian-configuration-tool">documentation</router-link>) to switch from the stable version to the {{selectedVersion}} version</li>
