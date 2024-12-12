@@ -16,7 +16,7 @@ We are pleased to announce the release of openHAB 4.3!
 This traditional winter release introduces numerous new features and enhancements to the openHAB ecosystem, paving the way for our next major release.
 
 One and a half year have passed since the [release of the openHAB 4.x series](/blog/2023-07-23-openhab-4-0-release.html), and we are proud to announce the final version of the openHAB 4.x series today.
-However, openHAB 4.3 is far from being just a minor step toward openHAB 5 — it is packed with incredible new features, including a log viewer, UI support for Thing actions, and the new interactive SVG canvas, which unlocks previously untapped possibilities for your smart home dashboard.
+However, openHAB 4.3 is far from being just a minor step towards openHAB 5 — it is packed with incredible new features, including a log viewer, UI support for Thing actions, and the new interactive SVG canvas, which unlocks previously untapped possibilities for your smart home dashboard.
 Having openHAB 4.3 as a solid foundation, we will now focus development on openHAB 5, for which we have already started to collect ideas.
 Make sure to read the outlook towards openHAB 5, it contains some important news!
 
@@ -38,11 +38,9 @@ In the following sections, our maintainers and contributors are introducing some
 _Florian Hotze ([@florian-h05](https://github.com/florian-h05)), openHAB Maintainer_
 
 openHAB 4.3 introduces automatic pre-compilation of script conditions and actions from UI-based rules.
-
 This means that these scripts are now compiled on openHAB startup instead of on the first execution and there is no delay any more when the rule is executed for the first time.
 Another benefit is that syntax errors are discovered at startup and not at runtime of the rule. Makes it easier to find and fix them.
-
-Especially Blockly users on Raspberry Pis with a 32-bit OS will love this change, as the JavaScript Scripting automation add-on, which is used by Blockly under the hood, is known to compile scripts very slowly on these devices.
+Especially Blockly users of Raspberry Pis with a 32-bit OS will love this change, as the JavaScript Scripting automation add-on, which is used by Blockly under the hood, is known to compile scripts very slowly on these devices.
 Please note that not all automation add-ons support pre-compilation (yet).
 
 ## Main UI Enhancements
@@ -72,18 +70,18 @@ The availability of Thing actions is a major improvement as it allows several th
   :::
 
   ::: tab Action&nbsp;Inputs
-  <p align="center"><img style="max-width: 70%;" src="/uploads/2024-12-15-openhab-4-3-release/thing-action-input.jpg"/></p>
+  <p align="center"><img style="max-width: 70%;" src="/uploads/2024-12-15-openhab-4-3-release/thing-actions-input.jpg"/></p>
   :::
 
   ::: tab Actions&nbsp;Output
-  <p align="center"><img style="max-width: 70%;" src="/uploads/2024-12-15-openhab-4-3-release/thing-action-output.jpg"/></p>
+  <p align="center"><img style="max-width: 70%;" src="/uploads/2024-12-15-openhab-4-3-release/thing-actions-output.jpg"/></p>
   :::
 
   ::::
 
 - Control special functionality of Things, e.g. put devices into pairing mode and display the pairing QR code.
 
-Many thanks to my maintainer colleague Laurent Garnier ([@lolodomo](https://github.com/lolodomo)) for his work on the openHAB core parts of this feature!
+Many thanks to my maintainer colleagure Laurent Garnier ([@lolodomo](https://github.com/lolodomo)) for his work on the openHAB core parts of this feature!
 
 ### Introducing `oh-card` - A Shared Base for Card Widgets
 
@@ -288,7 +286,27 @@ Please report any issues you have with specific devices in [GitHub issues](https
 
 ## openHABian Enhancements
 
-# Enjoy and Get in Touch!
+There have been a number of enhancements to openHABian, too.
+Big ones among these were the move to a bullseye based Linux distribution.
+It required us to rewrite major parts of the openHABian code to ensure an unattended.
+And while we still release new 32 bit images, we finally turned to "all 64" bit as the recommended platform setup.
+[Changes are tracked here](https://github.com/openhab/openhabian/releases/latest)
 
+# An outlook towards openHAB 5
+openHAB 4.3 will be the last major release of the openHAB 4 series, and the last major release which supports 32-bit systems.
+By the time openHAB 5 will become available next summer, you will need to have a 64-bit operating system on your openHAB server.
+We're making that announcement now, way ahead of time, to make sure you are prepared in time.
+
+And actually the best time to move to 64 bit is NOW.
+The OH upgrade step to 4.3 comes in handy as an opportunity to get that done today when you have to touch your system anyway.
+
+If you seize that opportunity, don't change hardware at the same time.
+On RPi, just make sure to move to a new "Endurance" type SD card, and take you revisit your disaster recovery precautions:
+Set up SD mirroring. Verify you're taking proper backups.
+Note you will not be able to migrate 32 bit openHABian installations to 64 bit.
+What you can do is, though, to export your openHAB configuration, install from scratch, and re-import.
+That'll be a matter of just an hour of work.
+
+# Enjoy and Get in Touch!
 We hope that you like the new release as much as we do - as always our [community forum](https://community.openhab.org/) is there for questions, comments and discussions.
 Do not hesitate to get in touch, join our community, receive help and share your experiences and use cases.
